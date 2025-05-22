@@ -1,5 +1,4 @@
-module.exports.config = {
-    dir: {
-        input: "content"
-    }
+module.exports = function(eleventyConfig) {
+    eleventyConfig.setInputDirectory("content")
+    eleventyConfig.setIncludesDirectory("../_includes")
 }

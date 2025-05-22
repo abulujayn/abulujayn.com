@@ -1,14 +1,11 @@
 {
   "name": "zaoomsite",
   "version": "1.0.0",
-  "description": "",
+  "description": "my personal website",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zaoom",
+  "license": "Apache-2.0",
   "type": "commonjs",
   "dependencies": {
     "@11ty/eleventy": "^3.1.0"
