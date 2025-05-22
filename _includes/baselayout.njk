@@ -3,11 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title }}</title>
+        <title>zaoom's place{% if title %} | {{ title }}{% endif %}</title>
     </head>
     <body>
         <h1>zaoom's place</h1>
         <div>
+            <a href="/">Home</a>
+            -
             <a href="posts/">Posts</a>
             -
             <a href="projects/">Projects</a>

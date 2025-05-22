@@ -1,0 +1,10 @@
+---
+layout: baselayout.njk
+---
+
+<hr />
+<h1>{{ title }}</h1>
+
+{{ content | safe }}
+<hr />
+Written on {{ page.date.toLocaleString("en-AU", {dateStyle: "short", timeStyle: "short", hour12: false}) }}
