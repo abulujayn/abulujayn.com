@@ -2,8 +2,8 @@
 layout: baselayout.njk
 ---
 
-<h1>{{ title }}</h1>
+<h2>{{ title }}</h2>
 
 {{ content | safe }}
 <hr />
-Written on {{ page.date.toLocaleString("en-AU", {dateStyle: "short", timeStyle: "short", hour12: false}) }}
+Written on {{ page.date | date }} using {{ using }}
