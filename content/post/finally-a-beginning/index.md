@@ -1,0 +1,35 @@
+---
+title: finally, a beginning
+using: VS Code on macOS
+---
+
+{{ bsmllh }}
+
+_tldr: I've finally published my own website and blog which I haven't backed out of before completing or not being entirely satisfied with because it didn't feel like **mine** or just didn't like the design. My plan for this place is to share my random, sometimes formulated thoughts, ideas and opinions on any topic which I have an interest or passion in; I'll likely also be putting out guides/tutorials for things which I feel are either not covered enough or just not in a way that I personally found easy to understand/follow._
+
+Back in the days when I first discovered the fascinating "inspect element" button when I was still in the early days of high school, my classmates and I would laugh at our silly jokes we made when we "hacked" Google, Wikipedia and other sites to make it say or show exactly what we wanted. Those very moments and especially the fact that my creations/modifications did not survive past a simple webpage reload led to the spark inside me to pursue website creation.<sup>1</sup> 
+
+This journey began with the very rudimentary process of using a WYSIWYG editor namely Weebly and Wix. Around that time, some of my classmates and I started playing this MMORPG in which we made a clan/group/party so we decided to create a website for it which until now I thought was lost to time but surprisingly I've managed to find it!<sup>2</sup> Pretty early on, I also figured out that I can embed custom HTML onto these pages meaning I wasn't just limited to the elements and controls that the editor(s) provided - in the beginning, it was merely copy-pasting but as I gradually learnt the basics of HTML, CSS and Javascript through Codecademy<sup>3</sup> and experiementing, I eventually started to understand how much I could really achieve with pure code. As I explored the HTML embedded elements more, I began to feel restricted by the bounds of a WYSIWYG editor especially one where you can't view the entire source of the webpage - this led to me creating websites from scratch.
+
+To not make this drag on too long, I'll cut the story short: I eventually got to a stage where I felt comfortable making what I wanted to make from scratch in HTML, CSS and Javascript - although I should preface it with the fact that I just can't come up with good designs and I blame that on my creativity. Since then, I've had the urge to create my own personal website - in the beginning, merely just to have a presence online but as I matured it turned into wanting to create my own blog to share my thoughts and help to whoever wanted to entertain it.
+
+With this newfound desire to create my own site, I went through many _many_ attempts and iterations<sup>4</sup> which consisted of trying from scratch to using templates built/running off frameworks/platforms. For some reason, I was either unable to complete or unsatisfied with the result of all my attempts for the main three reasons of: lack of motivation,<sup>5</sup> didn't like the design, or the design didn't feel like it was _mine_. The bottleneck always had to do with **design**. So, after (probably) more than a decade, I have finally succeeded in my goal by ditching design (in the modern sense) altogether. Where did I come up with this enlightening idea? Mostly through seeing a fair few websites utilise this principle found on Hacker News, and also the fact that I'm just a really big fan of simplicity and minimalism. This had been brewing inside me for some time but the thing that really tipped me over the edge was reading this article<sup>6</sup> about how one developer refused to use modern git platforms and instead stuck to the legacy of way of people raising "pull requests" by manually contacting the developer. I considered myself someone free of the shackles of societal norms and expectations but reading that article really opened my mind and eyes to the fact that sometimes we are tied down by shackles we don't even realise are there in the first place.
+
+Now, with the background of this website out of the way. My plan for this place is to share my random, sometimes formulated thoughts, ideas and opinions on any topic which I have an interest or passion in; I'll likely also be putting out guides/tutorials for things which I feel are either not covered enough or just not in a way that I personally found easy to understand/follow.
+
+
+
+<br /><br /><br />
+<sup>
+(1) I intentionally call it "creation" and not "development"
+<br />
+(2) <a href="https://oncothelegion.weebly.com" target="_blank">oncothelegion.weebly.com</a>
+<br />
+(3) Primarily went through the basic courses for HTML, CSS and Javascript - mostly during school breaktime but also some time at home as I got more serious
+<br />
+(4) A lot of which can be found on my <a href="https://github.com/zaoom" target="_blank">github</a>
+<br />
+(5) Mainly because I often put a condition on myself to make a really nice looking website whilst also being unique
+<br />
+(6) I found it on Hacker News, but I out of my lack of foresight, forgot to save a link to it for future reference. If I do find it in the future though, I'll be sure to link to it here
+</sup>
