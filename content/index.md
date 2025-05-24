@@ -1,5 +1,5 @@
 ---
-layout: baselayout.njk
+layout: base.njk
 title: home
 eleventyImport:
     collections: ["posts"]

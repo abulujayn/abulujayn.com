@@ -1,4 +1,5 @@
 const moment = require("moment")
+const htmlmin = require("html-minifier-terser")
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("date", function(date) {
@@ -11,6 +12,20 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksGlobal("llhkbr", "الله أكبر")
     eleventyConfig.addNunjucksGlobal("llhmdlllh", "الحمد لله")
     eleventyConfig.addNunjucksGlobal("sbhnllh", "سبحان الله")
+
+    eleventyConfig.addTransform("htmlmin", function (content) {
+		if ((this.page.outputPath || "").endsWith(".html")) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+			});
+
+			return minified;
+		}
+
+		return content;
+	});
 }
 
 module.exports.config = {
