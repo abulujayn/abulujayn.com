@@ -12,4 +12,4 @@ layout: base.njk
     {% endfor %}
 {% endif %}
 <hr />
-Published on {{ page.date | date }} using {{ using }}{% if edited %} and edited on {{ page.edited | date }}{% endif %}
+<em>Published on {{ page.date | date }}{% if edited %}, edited on {{ page.edited | date }}{% endif %} {% if using %}using {{ using }}{% endif %} built by <a href="https://11ty.dev" target="_blank">11ty</a></em>

@@ -1,7 +1,8 @@
 ---
 title: finally, a beginning
 using: VS Code on macOS
-tags: ["dunyā"]
+tags:
+- dunyā
 ---
 
 {{ bsmllh }}

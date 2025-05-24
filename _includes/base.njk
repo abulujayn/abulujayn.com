@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="data:," />
         <title>zaoom's place{% if title %} | {{ title }}{% endif %}</title>
+        <meta name="description" content="zaoom's place">
+        <meta name="author" content="zaoom">
+        {% set baseTags = ["zaoom", "zaoom's place", "blog", "nocss", "no css", "nojs", "no js", "simple", "minimal"] %}
+        {% set postTags = tags | default([]) | tagsOnly %}
+        {% set tags = baseTags.concat(postTags).concat(meta | default([])) | uniq %}
+        <meta name="keywords" content="{{ tags | join(", ")}}">
     </head>
     <body>
         <h1>zaoom's place</h1>

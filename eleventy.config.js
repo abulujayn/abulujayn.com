@@ -18,6 +18,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("getKeys", function(obj) {
         return Object.keys(obj || {})
     })
+    eleventyConfig.addFilter("uniq", function(arr) {
+        return [...new Set(arr || [])]
+    })
     eleventyConfig.addFilter("date", function(date) {
         return moment(date).format("YYYY-MM-DD")
     })
