@@ -5,5 +5,11 @@ layout: base.njk
 <h2>{{ title }}</h2>
 
 {{ content | safe }}
+
+{% if tags %}
+    {% for tag in tags | filterTags %}
+        <a href="/posts/{{ tag | slug }}/">#{{ tag }}</a>
+    {% endfor %}
+{% endif %}
 <hr />
-Published on {{ page.date | date }} using {{ using }}
+Published on {{ page.date | date }} using {{ using }}{% if edited %} and edited on {{ page.edited | date }}{% endif %}

@@ -6,6 +6,9 @@ eleventyImport:
 ---
 
 <h2>Posts</h2>
+{% for tag in collections | getKeys | tagsOnly %}
+    <a href="/posts/{{ tag | slug }}/">#{{ tag }}</a>
+{% endfor %}
 <ul>
     {% for post in (collections.posts | reverse) %}
         <li>
