@@ -4,7 +4,6 @@ title: setting up wings behind two layers of proxies
 using: VS Code on macOS
 tags:
 - pterodactyl
-- guide
 meta:
 - pterodactyl
 - wings
@@ -15,6 +14,8 @@ meta:
 - npm
 - nginx proxy manager
 ---
+
+{{ bsmllh }}
 
 I recently setup a personal instance of Pterodactyl + wings on my server, with both the panel and daemon webservers running behind an nginx reverse proxy (NPM) and then pointed to via proxied Cloudflare DNS. I knew that it was possible to run wings behind a reverse proxy and although I realise it's probably obvious in retrospective, I wasn't sure if it would also work even if there was two layers of proxying.
 
