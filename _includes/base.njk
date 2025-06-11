@@ -4,16 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="data:," />
-        <title>abu lujayn{% if title %} | {{ title }}{% endif %}</title>
-        <meta name="description" content="abu lujayn">
+        <title>zaeem's place{% if title %} | {{ title }}{% endif %}</title>
+        <meta name="description" content="zaeem's place">
         <meta name="author" content="abulujayn">
-        {% set baseTags = ["abu lujayn", "zaeem", "blog", "nocss", "no css", "nojs", "no js", "simple", "minimal"] %}
+        {% set baseTags = ["abu lujayn", "abulujayn", "zaeem", "zaeem's place", "zaeems place", "zaeems", "place", "blog", "nocss", "no css", "nojs", "no js", "simple", "minimal"] %}
         {% set postTags = tags | default([]) | tagsOnly %}
         {% set tags = baseTags.concat(postTags).concat(meta | default([])) | uniq %}
         <meta name="keywords" content="{{ tags | join(", ")}}">
     </head>
     <body>
-        <h1>abu lujayn</h1>
+        <h1>zaeem's place</h1>
         <div>
             <a href="/">Home</a>
             -
