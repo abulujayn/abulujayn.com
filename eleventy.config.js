@@ -9,6 +9,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksGlobal("llhkbr", "الله أكبر")
     eleventyConfig.addNunjucksGlobal("llhmdlllh", "الحمد لله")
     eleventyConfig.addNunjucksGlobal("sbhnllh", "سبحان الله")
+    eleventyConfig.addNunjucksGlobal("sllhlhwsllm-f", "صلى الله عليه وسلم")
+    eleventyConfig.addNunjucksGlobal("sllhlhwsllm", "ﷺ")
 
     eleventyConfig.addFilter("filterTags", function(tags) {
         return (tags || []).filter(tag => !["posts", "dunyā", "dīn"].includes(tag))
