@@ -12,4 +12,4 @@ layout: base.njk
     {% endfor %}
 {% endif %}
 <hr />
-<em>Published on <span title="{{ page.date | date }}">{{ page | hijri }}</span> {% if using %}using {{ using }}{% endif %} built by <a href="https://11ty.dev" target="_blank">11ty</a></em>
+<em>Published on <span title="{{ page.date | date }}">{{ page.date | hijri(date_shift) }}</span>{% if using %} using {{ using }}{% endif %}</em>

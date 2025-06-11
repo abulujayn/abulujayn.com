@@ -1,5 +1,5 @@
-const hijri = require("moment-hijri")
-hijri.locale("en-us")
+const moment = require("moment-hijri")
+moment.locale("en-us")
 const htmlmin = require("html-minifier-terser")
 
 module.exports = function(eleventyConfig) {
@@ -24,20 +24,19 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("uniq", function(arr) {
         return [...new Set(arr || [])]
     })
-    eleventyConfig.addFilter("date", function(date) {
-        const year = date.getFullYear()
-        const month = date.getMonth() + 1
-        const day = date.getDate()
+    eleventyConfig.addFilter("date", function(rawDate) {
+        const date = moment(rawDate)
+        const year = date.year()
+        const month = date.month() + 1
+        const day = date.date()
         return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`
     })
-    eleventyConfig.addFilter("hijri", function(data) {
-        const date = hijri(data.date)
+    eleventyConfig.addFilter("hijri", function(rawDate, date_shift) {
+        const date = moment(rawDate)
+        date.add(date_shift || 0, 'iDate')
         const year = date.iYear()
         const month = date.iMonth() + 1
-        let day = date.iDate()
-        if (data.date_shift) {
-            day += data.date_shift
-        }
+        const day = date.iDate()
         return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`
     })
 

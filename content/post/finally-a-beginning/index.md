@@ -1,5 +1,6 @@
 ---
 title: finally, a beginning
+date: 2025-05-23
 using: VS Code on macOS
 tags:
 - dunyā

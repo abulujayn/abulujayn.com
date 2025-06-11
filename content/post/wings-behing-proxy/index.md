@@ -1,6 +1,6 @@
 ---
-layout: post.njk
 title: setting up wings behind two layers of proxies
+date: 2025-05-24
 using: VS Code on macOS
 tags:
 - pterodactyl
