@@ -1,4 +1,5 @@
 module.exports = {
     tags: ["posts"],
-    layout: "post.njk"
+    layout: "post.njk",
+    public: true
 }

@@ -17,7 +17,7 @@ eleventyComputed:
 <a href="/posts/">All posts</a>
 <ul>
     {% for post in (collections[tag] | reverse) %}
-        {% if post.data.public | default(true) %}
+        {% if post.data.public %}
             <li>
                 <span title="{{ post.date | date }}">{{ post.date | hijri(post.data.date_shift) }}</span>
                 -

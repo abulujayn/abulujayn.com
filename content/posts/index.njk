@@ -11,7 +11,7 @@ eleventyImport:
 {% endfor %}
 <ul>
     {% for post in (collections.posts | reverse) %}
-        {% if post.data.public | default(true) %}
+        {% if post.data.public %}
             <li>
                 <span title="{{ post.date | date }}">{{ post.date | hijri(post.data.date_shift) }}</span>
                 -
