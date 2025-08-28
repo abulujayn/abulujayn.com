@@ -7,7 +7,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksGlobal("bsmllh", "بسم الله الرحمن الرحيم")
     eleventyConfig.addNunjucksGlobal("nshllh", "إن شاء الله")
     eleventyConfig.addNunjucksGlobal("llhkbr", "الله أكبر")
-    eleventyConfig.addNunjucksGlobal("llhmdlllh", "الحمد لله")
+    eleventyConfig.addNunjucksGlobal("lhmdlllh", "الحمد لله")
     eleventyConfig.addNunjucksGlobal("sbhnllh", "سبحان الله")
     eleventyConfig.addNunjucksGlobal("sllhlhwsllm-f", "صلى الله عليه وسلم")
     eleventyConfig.addNunjucksGlobal("sllhlhwsllm", "ﷺ")
