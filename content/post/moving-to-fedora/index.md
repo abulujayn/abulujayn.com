@@ -5,6 +5,9 @@ using: VS Code on Fedora 42
 tags:
 - dunyā
 - fedora
+- linux
+- asahi
+- mac
 meta:
 - fedora
 - debian
