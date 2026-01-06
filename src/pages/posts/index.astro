@@ -5,22 +5,22 @@ import { tagsOnly, formatDate, formatHijri } from '../../utils/common';
 import slugify from 'slugify';
 
 const posts = await getCollection('post');
-const allTags = posts.flatMap(post => post.data.tags || []);
+const allTags = posts.flatMap((post: any) => post.data.tags || []);
 const uniqueTags = [...new Set(tagsOnly(allTags))];
 
 const sortedPosts = posts
-    .filter(p => p.data.public !== false)
-    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+    .filter((p: any) => p.data.public !== false)
+    .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <BaseLayout title="posts">
     <h2>Posts</h2>
-    {uniqueTags.map(tag => (
+    {uniqueTags.map((tag: any) => (
         <Fragment>
-            <a href={`/posts/${slugify(tag, { lower: true })}/`}>#{tag}</a>{' '}
+            <a href={`/posts/${slugify(tag as string, { lower: true })}/`}>#{tag}</a>{' '}
         </Fragment>
     ))}
     <ul>
-        {sortedPosts.map(post => (
+        {sortedPosts.map((post: any) => (
             <li>
                 <span title={formatDate(post.data.date)}>{formatHijri(post.data.date, post.data.date_shift)}</span>
                 {' - '}

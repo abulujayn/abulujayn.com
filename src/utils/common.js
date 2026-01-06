@@ -28,14 +28,3 @@ export function filterTags(tags) {
 export function tagsOnly(tags) {
     return (tags || []).filter(tag => !["posts", "all"].includes(tag));
 }
-
-export const GLOBALS = {
-    llh: "الله",
-    bsmllh: "بسم الله الرحمن الرحيم",
-    nshllh: "إن شاء الله",
-    llhkbr: "الله أكبر",
-    lhmdlllh: "الحمد لله",
-    sbhnllh: "سبحان الله",
-    "sllhlhwsllm-f": "صلى الله عليه وسلم",
-    sllhlhwsllm: "ﷺ"
-};

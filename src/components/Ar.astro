@@ -1,0 +1,16 @@
+---
+const { term } = Astro.props;
+
+const terms = {
+  ṣalawāt: "ﷺ",
+  basmalah: "بسم الله الرحمن الرحيم",
+  "istithnā-": "إن شاء الله",
+  tasbīḥ: "سبحان الله",
+  taḥmīd: "الحمد لله",
+  takbīr: "الله أكبر"
+};
+
+const display = terms[term?.toLowerCase()] || term;
+const isArabic = terms[term?.toLowerCase()] !== undefined;
+---
+<span dir={isArabic ? "rtl" : undefined} lang={isArabic ? "ar" : undefined}><slot>{display}</slot></span>

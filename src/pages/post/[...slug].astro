@@ -12,7 +12,17 @@ if (!entry) {
 }
 
 const { Content } = await entry.render();
+
+import Ar from '../../components/Ar.astro';
+import DateNow from '../../components/DateNow.astro';
+import HijriNow from '../../components/HijriNow.astro';
+
+const components = {
+  Ar,
+  HijriNow,
+  DateNow,
+};
 ---
 <PostLayout {...entry.data}>
-  <Content />
+  <Content components={components} />
 </PostLayout>

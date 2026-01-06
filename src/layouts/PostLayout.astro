@@ -13,9 +13,9 @@ const filteredTags = filterTags(tags);
 
     {filteredTags.length > 0 && (
         <Fragment>
-            {filteredTags.map((tag) => (
+            {filteredTags.map((tag: string) => (
                 <a href={`/posts/${slugify(tag, { lower: true })}/`}>#{tag}</a>
-            )).reduce((prev, curr) => [prev, ' ', curr])}
+            )).reduce((prev: any, curr: any) => [prev, ' ', curr])}
         </Fragment>
     )}
     <hr />

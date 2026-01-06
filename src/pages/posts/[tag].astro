@@ -6,13 +6,13 @@ import slugify from 'slugify';
 
 export async function getStaticPaths() {
   const posts = await getCollection('post');
-  const allTags = posts.flatMap(post => post.data.tags || []);
+  const allTags = posts.flatMap((post: any) => post.data.tags || []);
   const uniqueTags = [...new Set(tagsOnly(allTags))];
 
-  return uniqueTags.map(tag => {
-     const filteredPosts = posts.filter(post => (post.data.tags || []).includes(tag));
+  return uniqueTags.map((tag: any) => {
+     const filteredPosts = posts.filter((post: any) => (post.data.tags || []).includes(tag));
      return {
-        params: { tag: slugify(tag, { lower: true }) },
+        params: { tag: slugify(tag as string, { lower: true }) },
         props: { tag, posts: filteredPosts }
      };
   });
@@ -20,14 +20,14 @@ export async function getStaticPaths() {
 
 const { tag, posts } = Astro.props;
 const sortedPosts = posts
-    .filter(p => p.data.public !== false)
-    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+    .filter((p: any) => p.data.public !== false)
+    .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <BaseLayout title={`#${tag} posts`}>
     <h2>Posts tagged #{tag}</h2>
     <a href="/posts/">All posts</a>
     <ul>
-        {sortedPosts.map(post => (
+        {sortedPosts.map((post: any) => (
             <li>
                 <span title={formatDate(post.data.date)}>{formatHijri(post.data.date, post.data.date_shift)}</span>
                 {' - '}
