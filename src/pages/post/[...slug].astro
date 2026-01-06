@@ -2,7 +2,7 @@
 import { getEntry } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
 
-export const prerender = false
+export const prerender = false;
 
 const { slug } = Astro.params;
 const entry = await getEntry('post', slug!);
@@ -23,6 +23,7 @@ const components = {
   DateNow,
 };
 ---
+
 <PostLayout {...entry.data}>
   <Content components={components} />
 </PostLayout>

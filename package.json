@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "lint": "astro check",
+    "format": "prettier --write .",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -18,5 +19,9 @@
     "moment-hijri": "^3.0.0",
     "slugify": "^1.6.6",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
