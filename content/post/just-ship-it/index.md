@@ -1,0 +1,27 @@
+---
+title: just ship it
+date: 2026-01-02
+using: VS Code on macOS
+tags:
+- dunyā
+- ai
+- vibecoding
+- github copilot
+- gemini
+meta:
+- gemini cli
+- google gemini
+- ai coding
+- vibe coding
+- vs code copilot
+---
+
+{{ bsmllh }}
+
+One problem I've always had with working on my side-projects is I'd never be able to get the ball moving on developing it. I'd get an idea one day, think about it (a lot) for a week and maybe even talk to ChatGPT about it. Sometimes, I (or ChatGPT) might actually write up a plan for it and sometimes I even make it to the stage of creating a plan/task list. Once I had gotten enough excitement built up for the idea, I may even create a project and do a couple things; that's usually where it ended. My theory is that I struggled to get over the first hurdle of starting a project just because of there being a big gap from starting to actually having something substantial to look at.
+
+Enter vibecoding. It's now 2026 and AI has come a long way, especially in the sphere of programming/vibecoding. My first experience using AI coding tools, which was with Github Copilot in VS Code was... okay. It was definitely able to do things, but I didn't exactly find it the most impressive nor efficient. Even with vibecoding, I was still failing at really getting a project rolling. Fast-forward to me trying out Gemini CLI, vibecoding is definitely much more efficient than it used to be and I finally have confidence in getting projects rolling. I actually did get <a href="https://github.com/abulujayn/ssh-tui" target="_blank">one project</a> completed before leaving Copilot for Gemini. After using Gemini for a few days now and getting used to it, I've completed another project! Probably the fastest ever I've been able to complete a project since my Bukkit and Discord bot days.
+
+I present to you, <a href="https://github.com/abulujayn/thisshouldbeathing" target="_blank">this should be a thing</a>. Yes, it's extremely simple and not that impressive *but* it's a project I've actually managed to publish online.
+
+After this little success of mine, I hope to ship more of my random ideas into actual solutions. Next, I'll be working on that text-based space exploration rpg that's been brewing in my mind the past couple of months {{ nshllh }}. I guess I can finally start updating my [projects](/projects) page. Perhaps after completing a few more projects using vibecoding, I'll write about my experience with it {{ nshllh }}.
