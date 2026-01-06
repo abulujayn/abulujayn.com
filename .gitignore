@@ -20,3 +20,4 @@ dist/
 *.sw?
 .DS_Store
 .astro/
+.vercel/
