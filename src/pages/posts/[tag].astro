@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { tagsOnly, formatDate, formatHijri } from '../../utils/common';
+import slugify from 'slugify';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('post');
+  const allTags = posts.flatMap(post => post.data.tags || []);
+  const uniqueTags = [...new Set(tagsOnly(allTags))];
+
+  return uniqueTags.map(tag => {
+     const filteredPosts = posts.filter(post => (post.data.tags || []).includes(tag));
+     return {
+        params: { tag: slugify(tag, { lower: true }) },
+        props: { tag, posts: filteredPosts }
+     };
+  });
+}
+
+const { tag, posts } = Astro.props;
+const sortedPosts = posts
+    .filter(p => p.data.public !== false)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout title={`#${tag} posts`}>
+    <h2>Posts tagged #{tag}</h2>
+    <a href="/posts/">All posts</a>
+    <ul>
+        {sortedPosts.map(post => (
+            <li>
+                <span title={formatDate(post.data.date)}>{formatHijri(post.data.date, post.data.date_shift)}</span>
+                {' - '}
+                <a href={`/post/${post.slug}/`}>{post.data.title}</a>
+            </li>
+        ))}
+    </ul>
+</BaseLayout>

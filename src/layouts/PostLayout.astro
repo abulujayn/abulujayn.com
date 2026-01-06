@@ -1,0 +1,23 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { filterTags, formatDate, formatHijri } from '../utils/common';
+import slugify from 'slugify';
+
+const { title, tags, date, date_shift, using, meta } = Astro.props;
+const filteredTags = filterTags(tags);
+---
+<BaseLayout title={title} tags={tags} meta={meta}>
+    <h2>{title}</h2>
+
+    <slot />
+
+    {filteredTags.length > 0 && (
+        <Fragment>
+            {filteredTags.map((tag) => (
+                <a href={`/posts/${slugify(tag, { lower: true })}/`}>#{tag}</a>
+            )).reduce((prev, curr) => [prev, ' ', curr])}
+        </Fragment>
+    )}
+    <hr />
+    <em>Published on <span title={formatDate(date)}>{formatHijri(date, date_shift)}</span>{using && ` using ${using}`}</em>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import { tagsOnly } from '../utils/common';
+
+const { frontmatter } = Astro.props;
+const title = frontmatter?.title || Astro.props.title;
+const propTags = frontmatter?.tags || Astro.props.tags || [];
+const meta = frontmatter?.meta || Astro.props.meta || [];
+
+const baseTags = ["abu lujayn", "abulujayn", "abū lujayn al-kawnkanī", "abū lujayn", "al-kawnkanī", "blog", "nocss", "no css", "nojs", "no js", "simple", "minimal"];
+const postTags = tagsOnly(propTags);
+// Combine and unique
+const allTags = [...new Set([...baseTags, ...postTags, ...meta])];
+const keywords = allTags.join(", ");
+
+const pageTitle = title ? `abū lujayn al-kawnkanī | ${title}` : `abū lujayn al-kawnkanī`;
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="data:," />
+        <title>{pageTitle}</title>
+        <meta name="description" content="abū lujayn al-kawnkanī">
+        <meta name="author" content="abulujayn">
+        <meta name="keywords" content={keywords}>
+    </head>
+    <body>
+        <h1>abū lujayn al-kawnkanī</h1>
+        <div>
+            <a href="/">home</a>
+            -
+            <a href="/posts">posts</a>
+            -
+            <a href="/projects">projects</a>
+        </div>
+        <hr />
+        <slot />
+    </body>
+</html>
