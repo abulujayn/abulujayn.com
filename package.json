@@ -21,6 +21,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@types/moment-hijri": "^2.1.4",
     "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1"
   }
