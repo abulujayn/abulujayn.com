@@ -4,22 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="data:," />
-        <title>zaeem's place{% if title %} | {{ title }}{% endif %}</title>
-        <meta name="description" content="zaeem's place">
+        <title>abū lujayn al-kawnkanī{% if title %} | {{ title }}{% endif %}</title>
+        <meta name="description" content="abū lujayn al-kawnkanī">
         <meta name="author" content="abulujayn">
-        {% set baseTags = ["abu lujayn", "abulujayn", "zaeem", "zaeem's place", "zaeems place", "zaeems", "place", "blog", "nocss", "no css", "nojs", "no js", "simple", "minimal"] %}
+        {% set baseTags = ["abu lujayn", "abulujayn", "abū lujayn al-kawnkanī", "abū lujayn", "al-kawnkanī", "blog", "nocss", "no css", "nojs", "no js", "simple", "minimal"] %}
         {% set postTags = tags | default([]) | tagsOnly %}
         {% set tags = baseTags.concat(postTags).concat(meta | default([])) | uniq %}
         <meta name="keywords" content="{{ tags | join(", ")}}">
     </head>
     <body>
-        <h1>zaeem's place</h1>
+        <h1>abū lujayn al-kawnkanī</h1>
         <div>
-            <a href="/">Home</a>
+            <a href="/">home</a>
             -
-            <a href="/posts">Posts</a>
+            <a href="/posts">posts</a>
             -
-            <a href="/projects">Projects</a>
+            <a href="/projects">projects</a>
         </div>
         <hr />
         {{ content | safe }}
