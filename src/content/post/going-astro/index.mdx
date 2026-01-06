@@ -1,0 +1,28 @@
+---
+title: exit 11ty, enter astro
+date: 2026-01-07
+using: VS Code on macOS
+tags:
+  - dunyā
+  - 11ty
+  - astro
+meta:
+  - why I switched to astro
+  - astro.build
+  - 11ty.dev
+  - eleventy
+  - 11ty vs astro
+  - markdown
+  - html
+  - markdown to html
+  - ssr
+  - server-side rendering
+---
+
+<Ar term="basmalah" />
+
+I initially created this site using <a href="https://11ty.dev" target="_blank">11ty</a> to compile markdown files into HTML, however I ran into one restriction/drawback of using a purely static website generator when publishing the post <a href="/post/am-i-living-in-the-past">am I living in the past?</a> where I wanted to have a dynamic date. Due to the restrictions of a static page, I ended up resorting to setting up a cron job to rebuild the website every day.
+
+After working with nextjs and react recently, I realised that I had completely overlooked using SSR instead of rebuilding prerendered content to achieve the effect of dynamic data and thus I went out on the lookout for a library or framework that supports both markdown to HTML generation as well as SSR content. Enter <a href="https://astro.build" target="_blank">Astro</a>. 
+
+The whole reason I chose 11ty originally was because of how efficient it was at building at 140-190ms for 23 files, which is decently quick. After switching to Astro, I'm seeing a build time of 40ms for 18 files (less files because I've moved posts to be SSR) which is very fast. Even if you include the overhead of setting up the server in order to also server SSR content, running `npm run dev` will give you an accessible server in 250-270ms which is quite a bit slower than 11ty's 140-190ms but sub-300ms is still blazingly quick in my eyes.
