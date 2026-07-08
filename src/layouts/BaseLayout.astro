@@ -25,9 +25,9 @@ const postTags = tagsOnly(propTags);
 const allTags = [...new Set([...baseTags, ...postTags, ...meta])];
 const keywords = allTags.join(', ');
 
-const pageTitle = title
-  ? `abū lujayn al-kawnkanī | ${title}`
-  : `abū lujayn al-kawnkanī`;
+const pageTitle = 'abū lujayn' + title
+  ? ` | ${title}`
+  : ``;
 ---
 
 <!doctype html>
@@ -42,7 +42,7 @@ const pageTitle = title
     <meta name="keywords" content={keywords} />
   </head>
   <body>
-    <h1>abū lujayn al-kawnkanī</h1>
+    <h1>abū lujayn</h1>
     <div>
       <a href="/">home</a>
       -

@@ -5,14 +5,15 @@ import PostLayout from '../../layouts/PostLayout.astro';
 export const prerender = false;
 
 const { slug } = Astro.params;
-const entry = await getEntry('post', slug!);
 
-if (!entry) {
-  return Astro.redirect('/404');
+if (!slug) {
+  return Astro.redirect('/archive/');
 }
 
-if (entry.data.archived === true) {
-  return Astro.redirect(`/archive/${entry.slug}/`);
+const entry = await getEntry('post', slug!);
+
+if (!entry || entry.data.archived !== true) {
+  return Astro.redirect('/404');
 }
 
 const { Content } = await entry.render();

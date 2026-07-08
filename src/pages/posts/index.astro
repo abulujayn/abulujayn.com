@@ -5,11 +5,13 @@ import { tagsOnly, formatDate, formatHijri } from '../../utils/common';
 import slugify from 'slugify';
 
 const posts = await getCollection('post');
-const allTags = posts.flatMap((post: any) => post.data.tags || []);
+const visiblePosts = posts.filter(
+  (p: any) => p.data.public !== false && p.data.archived !== true,
+);
+const allTags = visiblePosts.flatMap((post: any) => post.data.tags || []);
 const uniqueTags = [...new Set(tagsOnly(allTags))];
 
-const sortedPosts = posts
-  .filter((p: any) => p.data.public !== false)
+const sortedPosts = visiblePosts
   .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 

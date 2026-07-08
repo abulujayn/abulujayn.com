@@ -8,6 +8,7 @@ const postCollection = defineCollection({
     using: z.string().optional(),
     date_shift: z.number().optional(),
     public: z.boolean().optional(),
+    archived: z.boolean().optional(),
     layout: z.string().optional(),
     meta: z.array(z.string()).optional(),
   }),

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { formatDate, formatHijri } from '../../utils/common';
+
+const posts = await getCollection('post');
+const sortedPosts = posts
+  .filter((p: any) => p.data.public !== false && p.data.archived === true)
+  .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="archive">
+  <h2>Archive</h2>
+  <ul>
+    {
+      sortedPosts.map((post: any) => (
+        <li>
+          <span title={formatDate(post.data.date)}>
+            {formatHijri(post.data.date, post.data.date_shift)}
+          </span>
+          {' - '}
+          <a href={`/archive/${post.slug}/`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
