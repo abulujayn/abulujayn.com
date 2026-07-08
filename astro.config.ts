@@ -4,7 +4,16 @@ import mdx from '@astrojs/mdx';
 
 import vercel from '@astrojs/vercel';
 
+import remarkArabicTransliteration from './src/plugins/remarkArabic';
+
 export default defineConfig({
-  integrations: [mdx()],
+  markdown: {
+    remarkPlugins: [remarkArabicTransliteration],
+  },
+  integrations: [
+    mdx({
+      remarkPlugins: [remarkArabicTransliteration],
+    }),
+  ],
   adapter: vercel(),
 });
