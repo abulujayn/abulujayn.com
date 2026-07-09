@@ -5,6 +5,8 @@ import slugify from 'slugify';
 
 const { title, tags, date, date_shift, meta } = Astro.props;
 const filteredTags = filterTags(tags);
+const publishedTitle = formatDate(date);
+const publishedDate = formatHijri(date, date_shift);
 ---
 
 <BaseLayout title={title} tags={tags} meta={meta}>
@@ -24,9 +26,5 @@ const filteredTags = filterTags(tags);
     )
   }
   <hr />
-  <em
-    >published <span title={formatDate(date)}
-      >{formatHijri(date, date_shift)}</span
-    ></em
-  >
+  <em>published <span title={publishedTitle}>{publishedDate}</span></em>
 </BaseLayout>
