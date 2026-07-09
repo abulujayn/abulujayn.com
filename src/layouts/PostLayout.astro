@@ -3,13 +3,20 @@ import BaseLayout from './BaseLayout.astro';
 import { filterTags, formatDate, formatHijri } from '../utils/common';
 import slugify from 'slugify';
 
-const { title, tags, date, date_shift, meta } = Astro.props;
+const { title, tags, date, date_shift, meta, archived } = Astro.props;
 const filteredTags = filterTags(tags);
 const publishedTitle = formatDate(date);
 const publishedDate = formatHijri(date, date_shift);
 ---
 
 <BaseLayout title={title} tags={tags} meta={meta}>
+  {
+    archived === true && (
+      <h3>
+        <em>This post has been archived.</em>
+      </h3>
+    )
+  }
   <h2>{title}</h2>
 
   <slot />
