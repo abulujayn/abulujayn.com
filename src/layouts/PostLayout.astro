@@ -3,7 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import { filterTags, formatDate, formatHijri } from '../utils/common';
 import slugify from 'slugify';
 
-const { title, tags, date, date_shift, using, meta } = Astro.props;
+const { title, tags, date, date_shift, meta } = Astro.props;
 const filteredTags = filterTags(tags);
 ---
 
@@ -25,8 +25,8 @@ const filteredTags = filterTags(tags);
   }
   <hr />
   <em
-    >Published on <span title={formatDate(date)}
+    >published <span title={formatDate(date)}
       >{formatHijri(date, date_shift)}</span
-    >{using && ` using ${using}`}</em
+    ></em
   >
 </BaseLayout>

@@ -5,7 +5,6 @@ const postCollection = defineCollection({
     title: z.string(),
     date: z.date(),
     tags: z.array(z.string()).optional(),
-    using: z.string().optional(),
     date_shift: z.number().optional(),
     public: z.boolean().optional(),
     archived: z.boolean().optional(),
